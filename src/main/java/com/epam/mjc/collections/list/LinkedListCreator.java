@@ -5,5 +5,16 @@ import java.util.List;
 
 public class LinkedListCreator {
     public LinkedList<Integer> createLinkedList(List<Integer> sourceList) {
+        LinkedList<Integer> result = new LinkedList<>();
+
+        for(int i = 0 ; i < sourceList.size(); i++){
+            Integer numb = sourceList.get(i);
+            if(numb % 2 != 0){
+                result.addFirst(numb);
+            } else {
+                result.addLast(numb);
+            }
+        }
+        return result;
     }
 }
